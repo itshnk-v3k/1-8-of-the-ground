@@ -73,7 +73,9 @@ if (!("IntersectionObserver" in window)) {
 
 const cursorOrb = document.querySelector(".cursor-orb");
 
-if (cursorOrb) {
+const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+
+if (cursorOrb && !isTouchDevice) {
   let targetX = -500;
   let targetY = -500;
   let rafId = null;
@@ -98,6 +100,18 @@ if (cursorOrb) {
     targetX = e.clientX;
     targetY = e.clientY;
     scheduleUpdate();
+  });
+
+  document.addEventListener("mouseleave", () => {
+    cursorOrb.style.transition = "opacity 0.35s ease";
+    cursorOrb.style.opacity = "0";
+  });
+
+  document.addEventListener("mouseenter", () => {
+    if (!isInsideIframe) {
+      cursorOrb.style.transition = "opacity 0.35s ease";
+      cursorOrb.style.opacity = "0.85";
+    }
   });
 
   document.querySelectorAll(".video-wrap").forEach((wrap) => {
