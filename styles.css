@@ -633,9 +633,47 @@ h2 {
 
 footer {
   padding: 28px 0 44px;
-  color: #8f8f8f;
-  font-size: 14px;
   font-family: var(--font-body);
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  margin: 0;
+  color: #555;
+  font-size: 13px;
+}
+
+.footer-hacktaika {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.footer-hacktaika:hover {
+  opacity: 0.7;
+}
+
+.footer-made {
+  color: #555;
+  font-size: 13px;
+}
+
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
 }
 
 .reveal {
