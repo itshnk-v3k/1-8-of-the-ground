@@ -438,3 +438,9 @@ input[type="email"]:focus {
 #widget_faq li a {
   color: #aaaaaa !important;
 }
+
+.b-unit__header_size_mid {
+  color: #f0f0f0 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+}
