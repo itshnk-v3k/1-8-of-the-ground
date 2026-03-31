@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 html,
 body,
@@ -7,8 +7,18 @@ body,
 .b-registration__section,
 form#eventreg_form {
   background-color: #171717 !important;
-  color: #f5f5f5 !important;
-  font-family: "Montserrat", "Segoe UI", Arial, sans-serif !important;
+  color: #f0f0f0 !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.i-page {
+  padding: 24px !important;
+}
+
+.b-indentable,
+.b-registration__section_indent,
+.twf2-branding {
+  padding: 0px !important;
 }
 
 .b-reg-table,
@@ -16,31 +26,44 @@ form#eventreg_form {
 .b-reg-table__row_header,
 .b-reg-table__cell {
   background: #171717 !important;
-  border-color: #2c2c2c !important;
+  border-color: #333 !important;
+  color: #f0f0f0 !important;
 }
 
 .b-reg-table__row_header .b-reg-table__text,
 .b-reg-table__header {
-  color: #b3b3b3 !important;
+  color: #888 !important;
   font-size: 12px !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: 0.08em !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.b-reg-table__text {
+  font-family: "Montserrat", sans-serif !important;
 }
 
 .b-reg-table__row {
-  border-bottom: 1px solid #2c2c2c !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.b-reg-table__row {
+  border-bottom: none !important;
 }
 
 .b-reg-table__text,
 .b-reg-table__cell label,
-.b-reg-table__cell .js-reg-table-price {
-  color: #f5f5f5 !important;
-  font-family: "Montserrat", sans-serif !important;
+.b-reg-table__cell .js-reg-table-price,
+.b-not-bold {
+  color: #f0f0f0 !important;
+  font-size: 16px !important;
 }
 
 .b-reg-table__category-description {
-  color: #b3b3b3 !important;
+  color: #888 !important;
+  font-family: "Montserrat", sans-serif !important;
   font-size: 12px !important;
 }
 
@@ -53,53 +76,69 @@ form#eventreg_form {
 .b-reg-table__plusminus {
   display: flex !important;
   align-items: center !important;
-  gap: 4px !important;
+  gap: 6px !important;
 }
 
 .b-reg-table__plusminus_btn {
-  width: 28px !important;
-  height: 28px !important;
-  background: #2a2a2a !important;
-  border: 1px solid #2c2c2c !important;
-  border-radius: 6px !important;
-  color: #f5f5f5 !important;
+  width: 32px !important;
+  height: 32px !important;
+  background: #252525 !important;
+  border: 1px solid #3a3a3a !important;
+  border-radius: 8px !important;
+  color: #f0f0f0 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
-  transition:
-    background 0.2s,
-    border-color 0.2s !important;
+  transition: all 0.2s !important;
+  padding: 0 !important;
+}
+
+.b-reg-table__plusminus .b-reg-table__plusminus_btn:hover {
+  background-color: #c83324 !important;
+  border-color: #c83324 !important;
 }
 
 .b-reg-table__plusminus_btn:hover {
-  background: #c83324 !important;
+  background-color: #c83324 !important;
   border-color: #c83324 !important;
 }
 
 .b-reg-table__plusminus_btn svg {
-  fill: #f5f5f5 !important;
+  fill: #f0f0f0 !important;
+  width: 10px !important;
+  height: 10px !important;
 }
 
 .b-reg-table__plusminus-value {
-  color: #f5f5f5 !important;
+  color: #f0f0f0 !important;
   font-weight: 700 !important;
-  min-width: 24px !important;
+  font-size: 16px !important;
+  min-width: 28px !important;
   text-align: center !important;
 }
 
 .b-input,
 input[type="text"],
 input[type="email"] {
-  background: #111111 !important;
-  border: 1px solid #2c2c2c !important;
-  border-radius: 8px !important;
-  color: #f5f5f5 !important;
+  background: #222 !important;
+  border: 1px solid #3a3a3a !important;
+  border-radius: 10px !important;
+  color: #f0f0f0 !important;
   font-family: "Montserrat", sans-serif !important;
-  font-size: 14px !important;
-  padding: 10px 14px !important;
-  transition: border-color 0.2s !important;
+  font-size: 16px !important;
+  padding: 12px 16px !important;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s !important;
   box-sizing: border-box !important;
+  height: auto !important;
+}
+
+.b-input::placeholder,
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: #555 !important;
 }
 
 .b-input:focus,
@@ -107,18 +146,22 @@ input[type="text"]:focus,
 input[type="email"]:focus {
   border-color: #c83324 !important;
   outline: none !important;
-  box-shadow: 0 0 0 2px rgba(200, 51, 36, 0.2) !important;
+  box-shadow: 0 0 0 3px rgba(200, 51, 36, 0.15) !important;
+  background: #262626 !important;
 }
 
 .b-unit__text,
 .b-registration__question {
-  color: #b3b3b3 !important;
+  color: #aaa !important;
   font-size: 12px !important;
   font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
-  margin-bottom: 6px !important;
+  letter-spacing: 0.07em !important;
+  margin-bottom: 8px !important;
   display: block !important;
+}
+
+.b-registration__question {
+  text-transform: uppercase !important;
 }
 
 .b-registration__question_mandatory {
@@ -126,72 +169,95 @@ input[type="email"]:focus {
 }
 
 .b-reg-row {
-  margin-bottom: 16px !important;
+  margin-bottom: 20px !important;
 }
 
 .b-payment__methods h5,
 .b-registration__header {
-  color: #b3b3b3 !important;
+  color: #aaa !important;
   font-size: 12px !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
+  letter-spacing: 0.07em !important;
+  margin-bottom: 12px !important;
 }
 
 .b-payment__method {
-  background: #1e1e1e !important;
-  border: 1px solid #2c2c2c !important;
-  border-radius: 10px !important;
-  padding: 12px 16px !important;
-  margin-bottom: 8px !important;
+  background: #222 !important;
+  border: 1.5px solid #333 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  margin-bottom: 10px !important;
   display: flex !important;
   align-items: center !important;
-  gap: 12px !important;
+  gap: 14px !important;
   cursor: pointer !important;
   transition:
     border-color 0.2s,
-    background 0.2s !important;
+    background 0.2s,
+    box-shadow 0.2s !important;
 }
 
-.b-payment__method:hover {
-  border-color: #c83324 !important;
-  background: rgba(200, 51, 36, 0.06) !important;
+.b-payment__method:hover:not(.b-payment__method-active) {
+  border-color: #555 !important;
+  background: #282828 !important;
 }
 
-.b-payment__method-active,
-.b-payment__method input:checked ~ * {
+.b-payment__method-active {
   border-color: #c83324 !important;
-  background: rgba(200, 51, 36, 0.08) !important;
+  background: rgba(200, 51, 36, 0.07) !important;
+  box-shadow: 0 0 0 1px rgba(200, 51, 36, 0.2) !important;
+}
+
+.b-payment__method-icon {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin-left: -14px !important;
+  position: relative !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 26px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  opacity: 1 !important;
 }
 
 .b-payment__method-label {
-  color: #f5f5f5 !important;
+  color: #f0f0f0 !important;
   font-family: "Montserrat", sans-serif !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   font-weight: 600 !important;
 }
 
 .b-payment__method-input {
   accent-color: #c83324 !important;
+  min-width: 0px !important;
+  width: 0px !important;
+  height: 0px !important;
+  flex-shrink: 0 !important;
 }
 
 .b-registration__accept {
-  color: #b3b3b3 !important;
+  color: #888 !important;
   font-size: 12px !important;
-  line-height: 1.5 !important;
+  line-height: 1.6 !important;
   display: flex !important;
   align-items: flex-start !important;
-  gap: 8px !important;
+  gap: 10px !important;
 }
 
 .b-registration__accept input[type="checkbox"] {
   accent-color: #c83324 !important;
-  margin-top: 2px !important;
+  margin-top: 3px !important;
   flex-shrink: 0 !important;
+  width: 15px !important;
+  height: 15px !important;
 }
 
 .b-registration__accept a {
-  color: #c83324 !important;
+  color: #e54433 !important;
   text-decoration: none !important;
 }
 
@@ -199,8 +265,12 @@ input[type="email"]:focus {
   text-decoration: underline !important;
 }
 
+.b-registration__accept span {
+  color: #aaaaaa !important;
+}
+
 .b-registration__check {
-  margin-bottom: 12px !important;
+  margin-bottom: 14px !important;
 }
 
 .b-pro-wiget__reg-button {
@@ -211,64 +281,160 @@ input[type="email"]:focus {
   font-family: "Montserrat", sans-serif !important;
   font-size: 14px !important;
   font-weight: 800 !important;
-  letter-spacing: 0.04em !important;
-  padding: 14px 32px !important;
+  letter-spacing: 0.06em !important;
+  padding: 16px 32px !important;
   cursor: pointer !important;
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease,
-    opacity 0.2s !important;
+    box-shadow 0.2s ease !important;
   text-transform: uppercase !important;
   width: 100% !important;
+  opacity: 1 !important;
 }
 
-.b-pro-wiget__reg-button:hover:not(.disabled) {
+.b-pro-wiget__reg-button:hover:not([disabled]) {
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 28px rgba(200, 51, 36, 0.42) !important;
+  box-shadow: 0 8px 32px rgba(200, 51, 36, 0.5) !important;
+  background-color: #c83324 !important;
 }
 
+.b-pro-wiget__reg-button[disabled],
 .b-pro-wiget__reg-button.disabled {
-  opacity: 0.4 !important;
+  background: #2e2e2e !important;
+  color: #666 !important;
   cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .twf2-branding {
-  border-top: 1px solid #2c2c2c !important;
-  padding: 10px 0 !important;
-  margin-bottom: 8px !important;
+  border-top: none !important;
+  padding: 12px 0 8px !important;
+  margin-bottom: 4px !important;
 }
 
 .twf2-branding a {
   color: #555 !important;
   font-size: 12px !important;
   text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  justify-content: flex-end !important;
 }
 
 .twf2-branding svg {
-  opacity: 0.4 !important;
+  opacity: 0.35 !important;
 }
 
 .b-registration__acquirings {
-  margin-top: 12px !important;
-  opacity: 0.5 !important;
-  filter: grayscale(0.3) !important;
+  margin-top: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.b-acquirings__card,
+.b-acquirings__yandex {
+  height: 24px !important;
+  width: auto !important;
+  filter: none !important;
+  opacity: 1 !important;
 }
 
 .b-pro-widget__terms-popup {
   background: #2a2a2a !important;
-  color: #f5f5f5 !important;
-  border-radius: 8px !important;
+  color: #e54433 !important;
+  border-radius: 10px !important;
   font-size: 12px !important;
+  padding: 10px 14px !important;
+  border: 1px solid #3a3a3a !important;
 }
 
 .b-registration__error {
   background: rgba(200, 51, 36, 0.1) !important;
-  border: 1px solid rgba(200, 51, 36, 0.4) !important;
-  border-radius: 8px !important;
-  color: #ff6b5b !important;
-  padding: 10px 14px !important;
+  border: 1px solid rgba(200, 51, 36, 0.35) !important;
+  border-radius: 10px !important;
+  color: #ff7b6b !important;
+  padding: 12px 16px !important;
+  font-size: 14px !important;
 }
 
-.i-page {
-  padding: 24px !important;
+.b-pro-widget__terms-popup-arrow {
+  display: none !important;
+}
+
+.b-registration__section {
+  border-color: #2a2a2a !important;
+}
+
+.t-caption {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.t-caption.t-caption--black {
+  color: #f0f0f0 !important;
+}
+
+.twf2-timer-text {
+  color: #e54433 !important;
+}
+
+.js-timer.twf2-timer {
+  background: #222 !important;
+  border: 1.5px solid #333 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  margin-bottom: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  cursor: pointer !important;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s !important;
+}
+
+.twf2-timer__right {
+  position: relative !important;
+  background: none !important;
+  width: fit-content !important;
+}
+
+.js-timer-clock.twf2-timer__clock {
+  color: #e54433 !important;
+}
+
+.twf2-timer .twf2-timer__left {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+.b-payment {
+  overflow: visible !important;
+}
+
+.b-payment a {
+  display: flex !important;
+  width: 100% !important;
+  text-decoration: none !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+#widget_faq {
+  padding: 0 !important;
+}
+
+#widget_faq li a {
+  color: #aaaaaa !important;
 }
