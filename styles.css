@@ -799,7 +799,7 @@ footer {
   }
 
   .visionary-portrait {
-    height: 180px;
+    height: 240px;
   }
 
   .timing-item-flat {
@@ -911,7 +911,7 @@ footer {
     pointer-events: auto;
   }
   .visionary-portrait {
-    height: 180px !important;
+    height: 200px !important;
   }
   .visionary-card h3 {
     font-size: 11px;
